@@ -447,7 +447,7 @@
             <!-- The Schematic Diagram with Hotspot Overlay Pins -->
             <div class="proto-schematic-stage" id="proto-schematic-stage">
               <img
-                src="./assets/images/prototype-architecture-diagram.jpg"
+                src="./assets/images/prototype-architecture-diagram.png"
                 alt="AGRO-BIO SORB Complete Engineering Architecture Schematic"
                 class="proto-schematic-img"
                 id="proto-schematic-img"
@@ -455,98 +455,98 @@
 
               <!-- HOTSPOT PINS -->
               <!-- 1. Solar Panel -->
-              <button class="proto-hotspot" style="top: 13%; left: 13%;" data-component="proto-solar" aria-label="Solar Panel 20W-50W">
+              <button class="proto-hotspot" style="top: 18%; left: 13%;" data-component="proto-solar" aria-label="Solar Panel 20W-50W">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">☀️</span>
                 <span class="hotspot-tooltip">Solar Panel (20W–50W)</span>
               </button>
 
               <!-- 2. Charge Controller -->
-              <button class="proto-hotspot" style="top: 13%; left: 32%;" data-component="proto-controller" aria-label="Charge Controller">
+              <button class="proto-hotspot" style="top: 23%; left: 34%;" data-component="proto-controller" aria-label="Charge Controller">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">⚡</span>
-                <span class="hotspot-tooltip">Charge Controller (12.6V)</span>
+                <span class="hotspot-tooltip">Charge Controller (12V)</span>
               </button>
 
               <!-- 3. Rechargeable Battery -->
-              <button class="proto-hotspot" style="top: 13%; left: 46%;" data-component="proto-battery" aria-label="12V Rechargeable Battery">
+              <button class="proto-hotspot" style="top: 23%; left: 46%;" data-component="proto-battery" aria-label="12V Rechargeable Battery">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">🔋</span>
                 <span class="hotspot-tooltip">12V Battery Backup</span>
               </button>
 
               <!-- 4. Power Supply to ESP32 (Buck Converter) -->
-              <button class="proto-hotspot" style="top: 14%; left: 59%;" data-component="proto-buck" aria-label="Power Supply Buck Converter">
+              <button class="proto-hotspot" style="top: 24%; left: 58%;" data-component="proto-buck" aria-label="Power Supply Buck Converter">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">🔌</span>
                 <span class="hotspot-tooltip">Power Supply (5V/12V Buck)</span>
               </button>
 
               <!-- 5. ESP32 Controller & Sensors -->
-              <button class="proto-hotspot" style="top: 22%; left: 75%;" data-component="proto-esp32" aria-label="ESP32 Controller and Sensor Array">
+              <button class="proto-hotspot" style="top: 28%; left: 74%;" data-component="proto-esp32" aria-label="ESP32 Controller and Sensor Array">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">📟</span>
                 <span class="hotspot-tooltip">ESP32 &amp; Sensor Array</span>
               </button>
 
               <!-- 6. IoT Dashboard (Mobile / Web) -->
-              <button class="proto-hotspot" style="top: 22%; left: 93%;" data-component="proto-dashboard" aria-label="IoT Web and Mobile Dashboard">
+              <button class="proto-hotspot" style="top: 32%; left: 91%;" data-component="proto-dashboard" aria-label="IoT Web and Mobile Dashboard">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">📱</span>
                 <span class="hotspot-tooltip">IoT Mobile Dashboard</span>
               </button>
 
               <!-- 7. Polluted Water Inlet Tank -->
-              <button class="proto-hotspot" style="top: 48%; left: 6%;" data-component="proto-inlet" aria-label="Polluted Water Inlet Tank">
+              <button class="proto-hotspot" style="top: 58%; left: 8%;" data-component="proto-inlet" aria-label="Polluted Water Inlet Tank">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">🟤</span>
                 <span class="hotspot-tooltip">Polluted Water (Inlet)</span>
               </button>
 
               <!-- 8. Inlet TDS Sensor -->
-              <button class="proto-hotspot" style="top: 36%; left: 16%;" data-component="proto-inlet-tds" aria-label="Inlet TDS Sensor">
+              <button class="proto-hotspot" style="top: 47%; left: 18%;" data-component="proto-inlet-tds" aria-label="Inlet TDS Sensor">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">🧪</span>
                 <span class="hotspot-tooltip">Inlet TDS Sensor</span>
               </button>
 
               <!-- 9. DC Water Pump (12V) -->
-              <button class="proto-hotspot" style="top: 49%; left: 22%;" data-component="proto-pump" aria-label="DC Water Pump 12V">
+              <button class="proto-hotspot" style="top: 56%; left: 24%;" data-component="proto-pump" aria-label="DC Water Pump 12V">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">⚙️</span>
                 <span class="hotspot-tooltip">DC Water Pump (12V)</span>
               </button>
 
               <!-- 10. Primary Filter (Gravel & Sand) -->
-              <button class="proto-hotspot" style="top: 54%; left: 36%;" data-component="proto-primary" aria-label="Primary Filter Column">
+              <button class="proto-hotspot" style="top: 64%; left: 36%;" data-component="proto-primary" aria-label="Primary Filter Column">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">🪨</span>
                 <span class="hotspot-tooltip">Primary Filter (Mesh, Gravel, Sand)</span>
               </button>
 
               <!-- 11. Secondary Filter (Banana + B. subtilis & Rice Husk) -->
-              <button class="proto-hotspot active" style="top: 54%; left: 54%;" data-component="proto-secondary" aria-label="Secondary Bio-Filter Column">
+              <button class="proto-hotspot active" style="top: 64%; left: 54%;" data-component="proto-secondary" aria-label="Secondary Bio-Filter Column">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">🌿</span>
                 <span class="hotspot-tooltip">Secondary Filter (Banana + Rice Husk + RO)</span>
               </button>
 
               <!-- 12. UV Chamber -->
-              <button class="proto-hotspot" style="top: 55%; left: 73%;" data-component="proto-uv" aria-label="Germicidal UV Chamber">
+              <button class="proto-hotspot" style="top: 64%; left: 72%;" data-component="proto-uv" aria-label="Germicidal UV Chamber">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">💡</span>
                 <span class="hotspot-tooltip">UV Chamber (254nm Lamp)</span>
               </button>
 
               <!-- 13. Outlet TDS Sensor -->
-              <button class="proto-hotspot" style="top: 49%; left: 86%;" data-component="proto-outlet-tds" aria-label="Outlet TDS Sensor">
+              <button class="proto-hotspot" style="top: 59%; left: 86%;" data-component="proto-outlet-tds" aria-label="Outlet TDS Sensor">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">🔬</span>
                 <span class="hotspot-tooltip">Outlet TDS Sensor</span>
               </button>
 
               <!-- 14. Treated Water Reservoir -->
-              <button class="proto-hotspot" style="top: 68%; left: 92%;" data-component="proto-outlet" aria-label="Treated Clean Water Tank">
+              <button class="proto-hotspot" style="top: 78%; left: 91%;" data-component="proto-outlet" aria-label="Treated Clean Water Tank">
                 <span class="hotspot-pulse"></span>
                 <span class="hotspot-core">💧</span>
                 <span class="hotspot-tooltip">Treated Water Reservoir</span>
