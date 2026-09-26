@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AGRO-BIO SORB: Smart Bio-Adsorptive Water Purification & Real-Time Quality Monitoring. Smart India Hackathon environmental technology showcase." />
+    <meta name="keywords" content="Smart India Hackathon, AGRO-BIO SORB, Water Purification, Bio-Adsorbent, Real-Time Water Quality Monitoring, IoT ESP32, Turbidity Sensor, TDS, pH Monitoring, Clean Water Technology" />
+    <meta name="author" content="AGRO-BIO SORB Innovation Team" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AGRO-BIO SORB — Smart Bio-Adsorptive Water Purification & Real-Time Quality Monitoring" />
+    <meta property="og:description" content="An integrated bio-adsorptive filtration and IoT monitoring system designed for accessible, decentralized clean-water purification." />
+    <meta property="og:image" content="./assets/images/hero-water-purifier.jpg" />
+    <meta property="og:type" content="website" />
+
+    <title>AGRO-BIO SORB — Smart Bio-Adsorptive Water Purification & Real-Time Quality Monitoring | SIH Showcase</title>
+    
+    <!-- Google Fonts Preconnect & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-container" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Compact Sticky Header -->
+    <header class="navbar" id="site-header">
+      <div class="container nav-container">
+        <div class="brand-wrapper">
+          <a href="#hero" class="brand-logo" aria-label="AGRO-BIO SORB Home">
+            <span class="brand-icon">
+              <!-- Water droplet with purifying wave SVG -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                <path d="M7 14c1.5-1 3.5 1 5 0s3.5-1 5 0"></path>
+              </svg>
+            </span>
+            <span>AGRO-BIO SORB</span>
+          </a>
+          <span class="sih-tag">SIH CLEAN WATER SHOWCASE</span>
+        </div>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#team" class="nav-link">Team</a></li>
+            <li><a href="#workflow" class="nav-link">How It Works</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#prototype" class="btn-nav-prototype">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M10 2v7.31"></path>
+              <path d="M14 2v7.31"></path>
+              <path d="M8.5 2h7"></path>
+              <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+              <line x1="10" y1="18" x2="14" y2="18"></line>
+            </svg>
+            View Prototype
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#team" class="nav-link">Team</a>
+      <a href="#workflow" class="nav-link">How It Works</a>
+      <a href="#prototype" class="nav-link mobile-btn-prototype">View Prototype</a>
+    </div>
+
+    <main>
+      <!-- =================================================================
+           1. HERO SECTION (COMPACT SHOWCASE)
+           ================================================================= -->
+      <section class="hero-compact-section" id="hero">
+        <div class="container">
+          <div class="hero-compact-grid">
+            <div class="hero-text-col">
+              <div class="hero-top-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+                SMART INDIA HACKATHON INNOVATION SHOWCASE
+              </div>
+
+              <h1 class="hero-title">AGRO-BIO SORB</h1>
+              
+              <h2 class="hero-tagline">Smart Bio-Adsorptive Water Purification &amp; Real-Time Quality Monitoring</h2>
+
+              <p class="hero-short-desc">
+                An integrated bio-adsorptive filtration and IoT monitoring system designed for accessible, decentralized clean-water purification.
+              </p>
+
+              <div class="hero-compact-ctas">
+                <a href="#workflow" class="btn btn-primary" id="btn-explore-workflow">
+                  How It Works →
+                </a>
+                <a href="#prototype" class="btn btn-secondary" id="btn-view-prototype">
+                  View Prototype →
+                </a>
+              </div>
+
+              <div class="hero-tech-badges">
+                <span class="tech-badge-item">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M9 12l2 2 4-4"></path>
+                  </svg>
+                  BIO-ADSORPTION
+                </span>
+                <span class="tech-badge-item">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                  SMART SENSORS
+                </span>
+                <span class="tech-badge-item">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"></path>
+                  </svg>
+                  REAL-TIME MONITORING
+                </span>
+                <span class="tech-badge-item">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                  </svg>
+                  CLEAN WATER
+                </span>
+              </div>
+            </div>
+
+            <!-- Compact Realistic Visual -->
+            <div class="hero-visual-card">
+              <img src="./assets/images/hero-water-purifier.jpg" alt="AGRO-BIO SORB Bio-Adsorptive Filtration Column &amp; Clean Water Output Prototype" loading="eager" />
+              <div class="hero-visual-tag">
+                <span>BENCHTOP LAB PROTOTYPE RIG</span>
+                <span style="color: var(--color-cyan); font-weight: bold;">LIVE INFLOW TEST</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           2. QUICK PROJECT SNAPSHOT (COMPACT HORIZONTAL CARDS)
+           ================================================================= -->
+      <section class="snapshot-section" id="overview">
+        <div class="container">
+          <div class="snapshot-grid">
+            <!-- Card 1 -->
+            <div class="snapshot-card" data-detail="snapshot-bio" title="Click to view details">
+              <div class="snapshot-icon">🔬</div>
+              <div class="snapshot-body">
+                <div class="snapshot-title">BIO-ADSORPTION</div>
+                <div class="snapshot-desc">Engineered bio-sorbent media for pollutant capture.</div>
+              </div>
+              <span class="card-action-link" style="font-size: 0.7rem; align-self: flex-end;">→</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="snapshot-card" data-detail="snapshot-monitoring" title="Click to view details">
+              <div class="snapshot-icon">📡</div>
+              <div class="snapshot-body">
+                <div class="snapshot-title">SMART MONITORING</div>
+                <div class="snapshot-desc">Real-time water quality sensing.</div>
+              </div>
+              <span class="card-action-link" style="font-size: 0.7rem; align-self: flex-end;">→</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="snapshot-card" data-detail="snapshot-modular" title="Click to view details">
+              <div class="snapshot-icon">⚙️</div>
+              <div class="snapshot-body">
+                <div class="snapshot-title">MODULAR FILTRATION</div>
+                <div class="snapshot-desc">Compact multi-stage purification architecture.</div>
+              </div>
+              <span class="card-action-link" style="font-size: 0.7rem; align-self: flex-end;">→</span>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="snapshot-card" data-detail="snapshot-iot" title="Click to view details">
+              <div class="snapshot-icon">⚡</div>
+              <div class="snapshot-body">
+                <div class="snapshot-title">IoT TELEMETRY</div>
+                <div class="snapshot-desc">Live sensor data and quality-status tracking.</div>
+              </div>
+              <span class="card-action-link" style="font-size: 0.7rem; align-self: flex-end;">→</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           3. STUDENT INNOVATORS / TEAM (HIGH VISIBILITY NEAR TOP)
+           ================================================================= -->
+      <section class="section section-alt" id="team">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">STUDENT INNOVATORS</span>
+            <h2 class="section-title">THE TEAM BEHIND AGRO-BIO SORB</h2>
+            <p class="section-subtitle">
+              Smart India Hackathon multidisciplinary engineering team combining environmental materials chemistry, embedded IoT hardware, and water engineering.
+            </p>
+          </div>
+
+          <!-- Featured Faculty Mentor Compact Card -->
+          <div class="mentor-featured-compact">
+            <div class="mentor-left">
+              <div class="mentor-photo-compact">
+                <img src="./assets/images/mentor-muthusamy.png" alt="Mr. K. Muthusamy - Faculty Mentor" class="photo-muthusamy" loading="lazy" />
+              </div>
+              <div class="mentor-details-col">
+                <span class="mentor-badge">SIH Project Mentor &amp; Guide</span>
+                <h3 class="mentor-name-title">Mr. K. MUTHUSAMY</h3>
+                <div class="mentor-sub">Technical Competitions Head • Rathinam Technical Campus</div>
+              </div>
+            </div>
+            <button class="btn-mentor-details" data-detail="mentor-role">
+              View Mentor Role →
+            </button>
+          </div>
+
+          <!-- Six Student Members Compact Profile Cards -->
+          <div class="team-compact-grid">
+            <!-- 01: Pandirajha T -->
+            <div class="team-compact-card team-lead" data-detail="team-pandirajha" title="Click to inspect role details">
+              <div class="team-avatar">
+                <img src="./assets/images/team-pandirajha.jpg" alt="Pandirajha T" class="photo-pandirajha" loading="lazy" />
+              </div>
+              <div class="team-info">
+                <span class="team-role-pill">TEAM LEADER</span>
+                <div class="team-name">PANDIRAJHA T</div>
+                <div class="team-subtext">3rd Year • System Architect</div>
+              </div>
+              <span class="team-expand-arrow">→</span>
+            </div>
+
+            <!-- 02: Hari Vamsee P -->
+            <div class="team-compact-card" data-detail="team-harivamsee" title="Click to inspect role details">
+              <div class="team-avatar">
+                <img src="./assets/images/team-harivamsee.png" alt="Hari Vamsee P" class="photo-harivamsee" loading="lazy" />
+              </div>
+              <div class="team-info">
+                <span class="team-role-pill">HARDWARE</span>
+                <div class="team-name">HARI VAMSEE P</div>
+                <div class="team-subtext">ECE • 2nd Year Lead</div>
+              </div>
+              <span class="team-expand-arrow">→</span>
+            </div>
+
+            <!-- 03: Nandha Kumar S -->
+            <div class="team-compact-card" data-detail="team-nandhakumar" title="Click to inspect role details">
+              <div class="team-avatar">
+                <img src="./assets/images/team-nandhakumar.jpg" alt="Nandha Kumar S" class="photo-nandhakumar" loading="lazy" />
+              </div>
+              <div class="team-info">
+                <span class="team-role-pill">SOFTWARE</span>
+                <div class="team-name">NANDHA KUMAR S</div>
+                <div class="team-subtext">CSE • 2nd Year Lead</div>
+              </div>
+              <span class="team-expand-arrow">→</span>
+            </div>
+
+            <!-- 04: Srinithi R -->
+            <div class="team-compact-card" data-detail="team-srinithi" title="Click to inspect role details">
+              <div class="team-avatar">
+                <img src="./assets/images/team-srinithi.jpg" alt="Srinithi R" class="photo-srinithi" loading="lazy" />
+              </div>
+              <div class="team-info">
+                <span class="team-role-pill">CHEMISTRY</span>
+                <div class="team-name">SRINITHI R</div>
+                <div class="team-subtext">Chemistry • 3rd Year Lead</div>
+              </div>
+              <span class="team-expand-arrow">→</span>
+            </div>
+
+            <!-- 05: Afrin Sulthana T -->
+            <div class="team-compact-card" data-detail="team-afrin" title="Click to inspect role details">
+              <div class="team-avatar">
+                <img src="./assets/images/team-afrin.png" alt="Afrin Sulthana T" class="photo-afrin" loading="lazy" />
+              </div>
+              <div class="team-info">
+                <span class="team-role-pill">ANALYSIS</span>
+                <div class="team-name">AFRIN SULTHANA T</div>
+                <div class="team-subtext">Analytics • 3rd Year Lead</div>
+              </div>
+              <span class="team-expand-arrow">→</span>
+            </div>
+
+            <!-- 06: Gokul P -->
+            <div class="team-compact-card" data-detail="team-gokul" title="Click to inspect role details">
+              <div class="team-avatar">
+                <img src="./assets/images/team-gokul.jpg" alt="Gokul P" class="photo-gokul" loading="lazy" />
+              </div>
+              <div class="team-info">
+                <span class="team-role-pill">COLUMN RIG</span>
+                <div class="team-name">GOKUL P</div>
+                <div class="team-subtext">Mechanical • 3rd Year Lead</div>
+              </div>
+              <span class="team-expand-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           3. HOW IT WORKS (COMPACT HORIZONTAL PROCESS FLOW)
+           ================================================================= -->
+      <section class="section section-alt" id="workflow">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">PROCESS FLOW</span>
+            <h2 class="section-title">HOW IT WORKS</h2>
+            <p class="section-subtitle">
+              Click any stage in our six-phase process to inspect operational parameters.
+            </p>
+          </div>
+
+          <div class="process-compact-flow">
+            <!-- Step 1 -->
+            <div class="process-step-card" data-detail="crisis-contaminated">
+              <div class="process-step-num">01</div>
+              <div class="process-step-name">Contaminated Water</div>
+              <div class="process-step-action">Raw Influent →</div>
+            </div>
+
+            <span class="process-arrow">↓</span>
+
+            <!-- Step 2 -->
+            <div class="process-step-card" data-detail="snapshot-modular">
+              <div class="process-step-num">02</div>
+              <div class="process-step-name">Pre-Filtration</div>
+              <div class="process-step-action">Quartz Trap →</div>
+            </div>
+
+            <span class="process-arrow">↓</span>
+
+            <!-- Step 3 -->
+            <div class="process-step-card" data-detail="solution-bio">
+              <div class="process-step-num">03</div>
+              <div class="process-step-name">Bio-Adsorption</div>
+              <div class="process-step-action">Active Media →</div>
+            </div>
+
+            <span class="process-arrow">↓</span>
+
+            <!-- Step 4 -->
+            <div class="process-step-card" data-detail="solution-filtration">
+              <div class="process-step-num">04</div>
+              <div class="process-step-name">Purification</div>
+              <div class="process-step-action">Chelation →</div>
+            </div>
+
+            <span class="process-arrow">↓</span>
+
+            <!-- Step 5 -->
+            <div class="process-step-card" data-detail="snapshot-monitoring">
+              <div class="process-step-num">05</div>
+              <div class="process-step-name">Sensor Monitoring</div>
+              <div class="process-step-action">pH/NTU/TDS →</div>
+            </div>
+
+            <span class="process-arrow">↓</span>
+
+            <!-- Step 6 -->
+            <div class="process-step-card" data-detail="solution-monitoring">
+              <div class="process-step-num">06</div>
+              <div class="process-step-name">Clean Water</div>
+              <div class="process-step-action">Valve Gated ✓</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           4. PROTOTYPE ARCHITECTURE (INTERACTIVE SCHEMATIC & COMPONENT INSPECTOR)
+           ================================================================= -->
+      <section class="section" id="prototype">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">ENGINEERING SCHEMATIC &amp; IOT TESTBED</span>
+            <h2 class="section-title">PROTOTYPE ARCHITECTURE</h2>
+            <p class="section-subtitle">
+              Live engineering schematic of the solar-powered bio-adsorptive filtration testbed and IoT telemetry unit.
+              Touch or click any component on the diagram to see how it works and inspect its technical specifications.
+            </p>
+          </div>
+
+          <!-- Prototype Highlights Bar -->
+          <div class="prototype-highlights-bar">
+            <div class="proto-badge-item">
+              <span class="proto-badge-icon">☀️</span>
+              <div>
+                <strong>Off-Grid Solar Powered</strong>
+                <span>20W–50W PV + 12V Battery Backup</span>
+              </div>
+            </div>
+            <div class="proto-badge-item">
+              <span class="proto-badge-icon">🌿</span>
+              <div>
+                <strong>Bio-Adsorbent Core</strong>
+                <span>Banana Pseudostem + B. subtilis &amp; Rice Husk</span>
+              </div>
+            </div>
+            <div class="proto-badge-item">
+              <span class="proto-badge-icon">💡</span>
+              <div>
+                <strong>Germicidal UV Sterilizer</strong>
+                <span>254 nm UVC Pathogen Eradication</span>
+              </div>
+            </div>
+            <div class="proto-badge-item">
+              <span class="proto-badge-icon">📡</span>
+              <div>
+                <strong>Smart IoT Telemetry</strong>
+                <span>ESP32 Multi-Transducer In-Line Gating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Interactive Schematic Canvas Wrap -->
+          <div class="proto-canvas-wrap">
+            <div class="proto-canvas-header">
+              <div class="canvas-header-left">
+                <span class="canvas-status-dot"></span>
+                <span class="canvas-title">SYSTEM SCHEMATIC • INTERACTIVE COMPONENT MAP</span>
+              </div>
+              <div class="canvas-header-right">
+                <span class="canvas-hint">👆 Touch / Click any hotspot on the diagram below</span>
+              </div>
+            </div>
+
+            <!-- The Schematic Diagram with Hotspot Overlay Pins -->
+            <div class="proto-schematic-stage" id="proto-schematic-stage">
+              <img
+                src="./assets/images/prototype-architecture-diagram.jpg"
+                alt="AGRO-BIO SORB Complete Engineering Architecture Schematic"
+                class="proto-schematic-img"
+                id="proto-schematic-img"
+              />
+
+              <!-- HOTSPOT PINS -->
+              <!-- 1. Solar Panel -->
+              <button class="proto-hotspot" style="top: 13%; left: 13%;" data-component="proto-solar" aria-label="Solar Panel 20W-50W">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">☀️</span>
+                <span class="hotspot-tooltip">Solar Panel (20W–50W)</span>
+              </button>
+
+              <!-- 2. Charge Controller -->
+              <button class="proto-hotspot" style="top: 13%; left: 32%;" data-component="proto-controller" aria-label="Charge Controller">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">⚡</span>
+                <span class="hotspot-tooltip">Charge Controller (12.6V)</span>
+              </button>
+
+              <!-- 3. Rechargeable Battery -->
+              <button class="proto-hotspot" style="top: 13%; left: 46%;" data-component="proto-battery" aria-label="12V Rechargeable Battery">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">🔋</span>
+                <span class="hotspot-tooltip">12V Battery Backup</span>
+              </button>
+
+              <!-- 4. Power Supply to ESP32 (Buck Converter) -->
+              <button class="proto-hotspot" style="top: 14%; left: 59%;" data-component="proto-buck" aria-label="Power Supply Buck Converter">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">🔌</span>
+                <span class="hotspot-tooltip">Power Supply (5V/12V Buck)</span>
+              </button>
+
+              <!-- 5. ESP32 Controller & Sensors -->
+              <button class="proto-hotspot" style="top: 22%; left: 75%;" data-component="proto-esp32" aria-label="ESP32 Controller and Sensor Array">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">📟</span>
+                <span class="hotspot-tooltip">ESP32 &amp; Sensor Array</span>
+              </button>
+
+              <!-- 6. IoT Dashboard (Mobile / Web) -->
+              <button class="proto-hotspot" style="top: 22%; left: 93%;" data-component="proto-dashboard" aria-label="IoT Web and Mobile Dashboard">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">📱</span>
+                <span class="hotspot-tooltip">IoT Mobile Dashboard</span>
+              </button>
+
+              <!-- 7. Polluted Water Inlet Tank -->
+              <button class="proto-hotspot" style="top: 48%; left: 6%;" data-component="proto-inlet" aria-label="Polluted Water Inlet Tank">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">🟤</span>
+                <span class="hotspot-tooltip">Polluted Water (Inlet)</span>
+              </button>
+
+              <!-- 8. Inlet TDS Sensor -->
+              <button class="proto-hotspot" style="top: 36%; left: 16%;" data-component="proto-inlet-tds" aria-label="Inlet TDS Sensor">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">🧪</span>
+                <span class="hotspot-tooltip">Inlet TDS Sensor</span>
+              </button>
+
+              <!-- 9. DC Water Pump (12V) -->
+              <button class="proto-hotspot" style="top: 49%; left: 22%;" data-component="proto-pump" aria-label="DC Water Pump 12V">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">⚙️</span>
+                <span class="hotspot-tooltip">DC Water Pump (12V)</span>
+              </button>
+
+              <!-- 10. Primary Filter (Gravel & Sand) -->
+              <button class="proto-hotspot" style="top: 54%; left: 36%;" data-component="proto-primary" aria-label="Primary Filter Column">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">🪨</span>
+                <span class="hotspot-tooltip">Primary Filter (Mesh, Gravel, Sand)</span>
+              </button>
+
+              <!-- 11. Secondary Filter (Banana + B. subtilis & Rice Husk) -->
+              <button class="proto-hotspot active" style="top: 54%; left: 54%;" data-component="proto-secondary" aria-label="Secondary Bio-Filter Column">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">🌿</span>
+                <span class="hotspot-tooltip">Secondary Filter (Banana + Rice Husk + RO)</span>
+              </button>
+
+              <!-- 12. UV Chamber -->
+              <button class="proto-hotspot" style="top: 55%; left: 73%;" data-component="proto-uv" aria-label="Germicidal UV Chamber">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">💡</span>
+                <span class="hotspot-tooltip">UV Chamber (254nm Lamp)</span>
+              </button>
+
+              <!-- 13. Outlet TDS Sensor -->
+              <button class="proto-hotspot" style="top: 49%; left: 86%;" data-component="proto-outlet-tds" aria-label="Outlet TDS Sensor">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">🔬</span>
+                <span class="hotspot-tooltip">Outlet TDS Sensor</span>
+              </button>
+
+              <!-- 14. Treated Water Reservoir -->
+              <button class="proto-hotspot" style="top: 68%; left: 92%;" data-component="proto-outlet" aria-label="Treated Clean Water Tank">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-core">💧</span>
+                <span class="hotspot-tooltip">Treated Water Reservoir</span>
+              </button>
+            </div>
+
+            <!-- Flow & Wiring Legend Bar -->
+            <div class="proto-flow-legend">
+              <div class="legend-group">
+                <span class="legend-line line-polluted"></span>
+                <span class="legend-text">Polluted Inflow</span>
+              </div>
+              <div class="legend-group">
+                <span class="legend-line line-clean"></span>
+                <span class="legend-text">Clean Water Permeate</span>
+              </div>
+              <div class="legend-group">
+                <span class="legend-line line-power"></span>
+                <span class="legend-text">Solar / Battery Power (12V/5V)</span>
+              </div>
+              <div class="legend-group">
+                <span class="legend-line line-signal"></span>
+                <span class="legend-text">Transducer Signals to ESP32</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Component Inspector Panel (Updates whenever any component is touched/clicked) -->
+          <div class="proto-inspector-card" id="proto-inspector">
+            <div class="inspector-top-row">
+              <div class="inspector-badge-wrap">
+                <span class="inspector-badge" id="inspector-tag">Stage 02: Advanced Bio-Adsorption</span>
+                <span class="inspector-status-pill">
+                  <span class="status-live-pulse"></span> LIVE INSPECTOR
+                </span>
+              </div>
+              <div class="inspector-nav-btns">
+                <button class="btn-inspector-prev" id="btn-inspector-prev" aria-label="Previous component">← Prev</button>
+                <button class="btn-inspector-next" id="btn-inspector-next" aria-label="Next component">Next →</button>
+              </div>
+            </div>
+
+            <div class="inspector-main-grid">
+              <div class="inspector-left-col">
+                <div class="inspector-title-row">
+                  <div class="inspector-avatar" id="inspector-avatar">🌿</div>
+                  <div>
+                    <h3 class="inspector-title" id="inspector-title">Secondary Bio-Filter (Banana Pseudostem + Bacillus subtilis &amp; Rice Husk)</h3>
+                    <div class="inspector-role" id="inspector-role">Bio-chemically captures toxic heavy metals, synthetic dyes, pesticides, and micropollutants.</div>
+                  </div>
+                </div>
+
+                <div class="inspector-section-block">
+                  <div class="inspector-section-label">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    HOW IT WORKS (செயல்படும் விதம் / WORKING MECHANISM)
+                  </div>
+                  <p class="inspector-desc" id="inspector-desc">
+                    The core innovation of the AGRO-BIO SORB system. Combines functionalized banana pseudostem biomass augmented with a beneficial Bacillus subtilis bacterial biofilm to biosorb divalent heavy metals (Lead, Cadmium, Arsenic) and biodegrade organic pollutants. Backed by pyrolyzed rice husk biochar providing dense microporous carbon adsorption (>950 m²/g) to capture toxic dyes, and a polyamide RO membrane polishing layer to eliminate remaining dissolved ions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="inspector-right-col">
+                <div class="inspector-section-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  ENGINEERING SPECIFICATIONS &amp; PARAMETERS
+                </div>
+                <div class="inspector-specs-grid" id="inspector-specs">
+                  <!-- Injected dynamically via JavaScript -->
+                </div>
+
+                <div class="inspector-actions">
+                  <button class="btn-inspector-deepdive" id="btn-inspector-deepdive">
+                    View Full Scientific Specs in Modal →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Component Directory Explorer -->
+          <div class="proto-components-explorer">
+            <div class="explorer-header-row">
+              <div>
+                <h3 class="explorer-title">SYSTEM COMPONENT DIRECTORY</h3>
+                <p class="explorer-subtitle">Click any module below to inspect its live schematic node</p>
+              </div>
+              <div class="proto-filter-pills">
+                <button class="proto-filter-btn active" data-filter="all">All Modules (14)</button>
+                <button class="proto-filter-btn" data-filter="filtration">💧 Filtration Train</button>
+                <button class="proto-filter-btn" data-filter="power">⚡ Solar &amp; Power</button>
+                <button class="proto-filter-btn" data-filter="iot">📡 Smart IoT</button>
+              </div>
+            </div>
+
+            <div class="proto-cards-grid">
+              <!-- 1. Inlet Tank -->
+              <div class="proto-card-item" data-component="proto-inlet" data-group="filtration">
+                <span class="proto-card-avatar">🟤</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Polluted Water Inlet</div>
+                  <div class="proto-card-sub">Untreated wastewater reservoir</div>
+                </div>
+              </div>
+
+              <!-- 2. Inlet TDS -->
+              <div class="proto-card-item" data-component="proto-inlet-tds" data-group="iot">
+                <span class="proto-card-avatar">🧪</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Inlet TDS Sensor</div>
+                  <div class="proto-card-sub">Baseline mineral conductivity probe</div>
+                </div>
+              </div>
+
+              <!-- 3. DC Pump -->
+              <div class="proto-card-item" data-component="proto-pump" data-group="filtration">
+                <span class="proto-card-avatar">⚙️</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">12V DC Water Pump</div>
+                  <div class="proto-card-sub">Pressurized inflow actuator</div>
+                </div>
+              </div>
+
+              <!-- 4. Primary Filter -->
+              <div class="proto-card-item" data-component="proto-primary" data-group="filtration">
+                <span class="proto-card-avatar">🪨</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Primary Sediment Filter</div>
+                  <div class="proto-card-sub">Mesh, gravel &amp; silica sand bed</div>
+                </div>
+              </div>
+
+              <!-- 5. Secondary Filter -->
+              <div class="proto-card-item active" data-component="proto-secondary" data-group="filtration">
+                <span class="proto-card-avatar">🌿</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Secondary Bio-Filter</div>
+                  <div class="proto-card-sub">Banana + B. subtilis, Rice Husk, RO</div>
+                </div>
+              </div>
+
+              <!-- 6. UV Chamber -->
+              <div class="proto-card-item" data-component="proto-uv" data-group="filtration">
+                <span class="proto-card-avatar">💡</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Germicidal UV Chamber</div>
+                  <div class="proto-card-sub">254nm UVC pathogen destruction</div>
+                </div>
+              </div>
+
+              <!-- 7. Outlet TDS -->
+              <div class="proto-card-item" data-component="proto-outlet-tds" data-group="iot">
+                <span class="proto-card-avatar">🔬</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Outlet TDS Sensor</div>
+                  <div class="proto-card-sub">Final permeate purity verifier</div>
+                </div>
+              </div>
+
+              <!-- 8. Clean Water Output -->
+              <div class="proto-card-item" data-component="proto-outlet" data-group="filtration">
+                <span class="proto-card-avatar">💧</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Treated Water Reservoir</div>
+                  <div class="proto-card-sub">WHO-certified potable safe storage</div>
+                </div>
+              </div>
+
+              <!-- 9. Solar Panel -->
+              <div class="proto-card-item" data-component="proto-solar" data-group="power">
+                <span class="proto-card-avatar">☀️</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Solar Panel (20W–50W)</div>
+                  <div class="proto-card-sub">Monocrystalline PV power source</div>
+                </div>
+              </div>
+
+              <!-- 10. Charge Controller -->
+              <div class="proto-card-item" data-component="proto-controller" data-group="power">
+                <span class="proto-card-avatar">⚡</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">Charge Controller</div>
+                  <div class="proto-card-sub">12.6V PWM/MPPT regulator</div>
+                </div>
+              </div>
+
+              <!-- 11. Battery -->
+              <div class="proto-card-item" data-component="proto-battery" data-group="power">
+                <span class="proto-card-avatar">🔋</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">12V Storage Battery</div>
+                  <div class="proto-card-sub">Continuous 24/7 power backup</div>
+                </div>
+              </div>
+
+              <!-- 12. Buck Converter -->
+              <div class="proto-card-item" data-component="proto-buck" data-group="power">
+                <span class="proto-card-avatar">🔌</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">5V/12V Power Unit</div>
+                  <div class="proto-card-sub">Noise-isolated DC-DC buck converter</div>
+                </div>
+              </div>
+
+              <!-- 13. ESP32 Controller -->
+              <div class="proto-card-item" data-component="proto-esp32" data-group="iot">
+                <span class="proto-card-avatar">📟</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">ESP32 &amp; Sensor Array</div>
+                  <div class="proto-card-sub">Edge controller &amp; 16-bit ADC</div>
+                </div>
+              </div>
+
+              <!-- 14. Mobile Dashboard -->
+              <div class="proto-card-item" data-component="proto-dashboard" data-group="iot">
+                <span class="proto-card-avatar">📱</span>
+                <div class="proto-card-meta">
+                  <div class="proto-card-title">IoT Mobile Dashboard</div>
+                  <div class="proto-card-sub">Wireless cloud &amp; app telemetry</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal / Progressive Disclosure Drawer Popup -->
+    <div class="modal-backdrop" id="detail-modal" aria-hidden="true">
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">✕</button>
+        <div class="modal-tag" id="modal-tag">Project Details</div>
+        <h3 class="modal-title" id="modal-title">AGRO-BIO SORB</h3>
+        <p class="modal-body" id="modal-desc"></p>
+        <div class="modal-specs-list" id="modal-specs"></div>
+      </div>
+    </div>
+
+    <!-- Compact Footer -->
+    <footer class="compact-footer">
+      <div class="container">
+        <div class="footer-compact-row">
+          <div class="brand-wrapper">
+            <span class="brand-icon" style="width: 24px; height: 24px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </span>
+            <span style="font-family: var(--font-heading); font-weight: 800; color: #FFFFFF;">AGRO-BIO SORB</span>
+          </div>
+
+          <ul class="footer-compact-links">
+            <li><a href="#hero" class="footer-compact-link">Home</a></li>
+            <li><a href="#team" class="footer-compact-link">Team</a></li>
+            <li><a href="#workflow" class="footer-compact-link">How It Works</a></li>
+            <li><a href="#prototype" class="footer-compact-link">View Prototype</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-copy">
+          <div>Smart India Hackathon Showcase • Smart Bio-Adsorptive Water Purification &amp; Real-Time Quality Monitoring</div>
+          <div>All sensor values shown on the dashboard represent demonstration/sample data (DEMO DATA).</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Unified Script -->
+    <script type="module" src="./src/main.js"></script>
+    <script>
+      if (window.location.protocol === 'file:' && !window.agroBioSorbLoaded) {
+        var fallbackScript = document.createElement('script');
+        fallbackScript.src = './src/main.js';
+        document.body.appendChild(fallbackScript);
+      }
+    </script>
+  </body>
+</html>
